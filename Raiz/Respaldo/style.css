@@ -1,0 +1,638 @@
+/* IMPORTAR FUENTE SORA (Moderna y limpia) */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 40px; /* Evita que el título de la sección quede pegado al borde superior */
+}
+
+/* RESET Y ESTILOS GENERALES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #F7F7F9;
+  color: #334155;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   EFECTO DESENFOCADO DEL FONDO (MODAL)
+   ========================================== */
+#page-content {
+  transition: filter 0.3s ease;
+}
+
+#page-content.blurred {
+  filter: blur(6px);
+  pointer-events: none;
+}
+
+/* ==========================================
+   HERO / ENCABEZADO
+   ========================================== */
+.hero-header {
+  background-color: #0F172A;
+  color: #FFFFFF;
+  padding: 80px 20px;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+/* Tipografía de Nombre refinada */
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+  color: #FFFFFF;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #94A3B8;
+  margin-bottom: 30px;
+}
+
+/* BOTONES HOMOGÉNEOS */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Ambos botones en fondo blanco simétrico con texto azul/oscuro */
+.btn-primary, 
+.btn-secondary {
+  background-color: #FFFFFF;
+  color: #1E56A0;
+  border: 1px solid #FFFFFF;
+}
+
+.btn-primary:hover, 
+.btn-secondary:hover {
+  background-color: #F1F5F9;
+  color: #0F172A;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero-avatar-wrapper {
+  flex-shrink: 0;
+}
+
+.hero-avatar {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================
+   TRAYECTORIA (COLUMNA 25% / 75%)
+   ========================================== */
+.cv-layout-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.cv-sidebar-menu {
+  flex: 0 0 25%;
+  padding-left: 0;
+}
+
+.cv-menu-sticky {
+  position: sticky;
+  top: 40px;
+}
+
+/* ==========================================
+   MENÚ LATERAL: ESTRUCTURA LIMPIA Y SANGRÍA
+   ========================================== */
+
+.cv-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-left: none !important;
+}
+
+/* 1. Categorías Principales (Se quedan alineadas a la izquierda sin línea) */
+.cv-menu-category {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1E56A0;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-top: 24px;
+  margin-bottom: 10px;
+  padding-left: 0 !important;
+  border: none !important;
+  background: none !important;
+  list-style: none;
+}
+
+.cv-menu-category:first-child {
+  margin-top: 0;
+}
+
+/* 2. Sub-items (Los enlaces se corren 12px a la derecha y llevan la línea) */
+.cv-menu-link {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #64748B;
+  text-decoration: none;
+  padding: 6px 0 6px 16px; /* Aire entre la línea y el texto del link */
+  
+  /* MARGEN IZQUIERDO: Aire respecto a los títulos en mayúscula */
+  margin-left: 12px; 
+  
+  /* LÍNEA ÚNICA CONTINUA: Borde en el enlace */
+  border-left: 2px solid #E2E8F0; 
+  transition: all 0.25s ease-in-out;
+}
+
+/* 3. Cambio de color cuando está activo o hover */
+.cv-menu-link:hover {
+  color: #1E56A0;
+  border-left-color: #93C5FD;
+}
+
+.cv-menu-link.active {
+  color: #1E56A0;
+  font-weight: 600;
+  border-left-color: #1E56A0; /* La misma línea se tiñe de azul */
+}
+
+/* ==========================================
+   COLUMNA DERECHA: SECCIONES Y TARJETAS
+   ========================================== */
+.cv-content-area {
+  flex: 0 0 75%;
+}
+
+.cv-content-area .cv-section-card {
+  margin-bottom: 30px;
+}
+
+.cv-section-card {
+  background: #FFFFFF;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.cv-section-headline {
+  font-size: 1.5rem;
+  color: #1E56A0;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.cv-timeline-item {
+  border-bottom: 1px solid #E2E8F0;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+
+.cv-timeline-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.cv-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.cv-item-role {
+  font-size: 1.15rem;
+  color: #0F172A;
+  font-weight: 600;
+}
+
+.cv-item-date {
+  font-size: 0.85rem;
+  background-color: #E2E8F0;
+  color: #334155;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-weight: 500;
+}
+
+.cv-item-company {
+  font-size: 0.95rem;
+  color: #64748B;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.cv-item-desc {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+/* ==========================================
+   ESTILOS DE LA VENTANA EMERGENTE (MODAL)
+   ========================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-card {
+  background-color: #FFFFFF;
+  width: 90%;
+  max-width: 440px;
+  padding: 35px 30px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.22);
+  position: relative;
+  text-align: center;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-card {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #94A3B8;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: #0F172A;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 28px;
+}
+
+.modal-options {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.contact-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #E2E8F0;
+  flex: 1;
+  transition: all 0.25s ease;
+}
+
+.contact-option:hover {
+  border-color: #1E56A0;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(30, 86, 160, 0.08);
+}
+
+.icon-wrapper {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-icon-img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.contact-option:hover .modal-icon-img {
+  transform: scale(1.08);
+}
+
+.option-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+/* RESET DE ESTILO PARA BOTÓN DENTRO DE MODAL OPTIONS */
+button.contact-option {
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* ==========================================
+   ESTILOS Y TRANSICIONES DEL FORMULARIO
+   ========================================== */
+.modal-step {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal-step.active {
+  display: block;
+  opacity: 1;
+}
+
+.modal-header-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.modal-back-btn {
+  background: none;
+  border: none;
+  color: #1E56A0;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.modal-back-btn:hover {
+  background-color: #F1F5F9;
+}
+
+.modal-title-form {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0 auto;
+}
+
+/* FORMULARIO Y INPUTS */
+.modal-form {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-group-row {
+  display: flex;
+  gap: 12px;
+}
+
+.form-group-row .form-group {
+  flex: 1;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 4px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  font-family: 'Sora', sans-serif;
+  font-size: 0.88rem;
+  color: #0F172A;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #1E56A0;
+  box-shadow: 0 0 0 3px rgba(30, 86, 160, 0.12);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.btn-submit-form {
+  width: 100%;
+  margin-top: 6px;
+  background-color: #1E56A0;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px;
+}
+
+.btn-submit-form:hover {
+  background-color: #0F172A;
+  color: #FFFFFF;
+}
+
+/* ==========================================
+   PANTALLA DE ÉXITO (STEP 3)
+   ========================================== */
+.modal-success-content {
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #DEF7EC;
+  color: #0E9F6E;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+}
+
+.success-desc {
+  color: #475569;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.countdown-wrapper {
+  font-size: 0.85rem;
+  color: #64748B;
+  background-color: #F8FAFC;
+  padding: 8px 14px;
+  border-radius: 20px;
+  display: inline-block;
+  border: 1px solid #E2E8F0;
+}
+
+#countdown-timer {
+  color: #1E56A0;
+  font-size: 1rem;
+}
+
+/* ==========================================
+   CALL TO ACTION FINAL EN TRAYECTORIA
+   ========================================== */
+.cv-bottom-cta {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 2px dashed #E2E8F0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.cta-text {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0F172A;
+}
+
+.cv-bottom-cta .btn-primary {
+  background-color: #1E56A0;
+  color: #FFFFFF;
+  padding: 14px 32px;
+}
+
+.cv-bottom-cta .btn-primary:hover {
+  background-color: #0F172A;
+  color: #FFFFFF;
+}
+
+/* ==========================================
+   RESPONSIVE MOBILE
+   ========================================== */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .cv-layout-container {
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .cv-sidebar-menu, 
+  .cv-content-area {
+    flex: 100%;
+  }
+
+  .cv-menu-sticky {
+    position: static;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-group-row {
+    flex-direction: column;
+    gap: 14px;
+  }
+}
+/* SELECTOR DE IDIOMAS (FORZADO CON ALTO CONTRASTE) */
+.lang-selector {
+  position: absolute !important;
+  top: 1.25rem !important;
+  right: 1.5rem !important;
+  display: flex !important;
+  gap: 0.5rem !important;
+  z-index: 9999 !important;
+}
+
+.lang-btn {
+  color: #ffffff !important; /* Texto blanco siempre */
+  text-decoration: none !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  padding: 0.3rem 0.6rem !important;
+  border-radius: 6px !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  transition: all 0.2s ease !important;
+}
+
+.lang-btn:hover {
+  background-color: rgba(255, 255, 255, 0.35) !important;
+  color: #ffffff !important;
+}
+
+.lang-btn.active {
+  background-color: #ffffff !important;
+  color: #0f172a !important; /* Azul oscuro solo para el activo (ES) */
+}

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alejandro Carpinelli - Portfolio</title>
+  <link rel="icon" href="data:,">
+  <!-- CSS con parámetro de versión para evitar problemas de caché -->
+  <link rel="stylesheet" href="../style.css">
+  
+  <!-- Cargar EmailJS v4 -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Cargar script JS de la app -->
+  <script src="../script.js?v=102" defer></script>
+</head>
+
+<body>
+
+  <!-- WRAPPER DE CONTENIDO PRINCIPAL (SOPORTA EL DESENFOQUE) -->
+  <div id="page-content">
+
+    <!-- HERO / ENCABEZADO PRINCIPAL -->
+    <header class="hero-header">
+      
+      <!-- SELECTOR DE IDIOMAS (Arriba a la derecha) -->
+      <div class="lang-selector">
+        <a href="/es/" class="lang-btn">ES</a>
+        <a href="/pt/" class="lang-btn">PT</a>
+        <a href="/en/" class="lang-btn">EN</a>
+        <a href="/fr/" class="lang-btn active">FR</a>
+      </div>
+
+      <div class="hero-container">
+        
+        <!-- COLUMNA IZQUIERDA: TEXTO Y BOTONES -->
+        <div class="hero-content">
+          <h1 class="hero-title">Je suis Alejandro Carpinelli</h1>
+          <h2 class="hero-subtitle">Application Support Analyst | Développeur Full Stack Junior</h2>
+          <div class="hero-buttons">
+            <button type="button" class="btn btn-primary btn-contacto-modal">Contact</button>
+            <a href="#" class="btn btn-secondary">Télécharger CV</a>
+          </div>
+        </div>
+
+        <!-- COLUMNA DERECHA: FOTO / BANDERA -->
+        <div class="hero-avatar-wrapper">
+          <img src="/Imagenes/Foto_perfil2.webp"
+               alt="Alejandro Carpinelli" 
+               class="hero-avatar"
+               loading="eager"
+               fetchpriority="high">
+        </div>
+
+      </div>
+    </header>
+
+    <!-- CONTENEDOR GENERAL DE LA TRAYECTORIA -->
+    <section class="cv-layout-container">
+      
+      <!-- COLUMNA IZQUIERDA: MENÚ / ÍNDICE (25%) -->
+      <aside class="cv-sidebar-menu">
+        <div class="cv-menu-sticky">
+          <nav class="cv-nav">
+            <ul class="cv-menu-list">
+              
+              <!-- CATEGORÍA 1 -->
+              <li class="cv-menu-category">Profil & Compétences</li>
+              <li><a href="#sobre-mi" class="cv-menu-link active">À propos de moi</a></li>
+              <li><a href="#competencias" class="cv-menu-link">Compétences & Aptitudes</a></li>
+              
+              <!-- CATEGORÍA 2 -->
+              <li class="cv-menu-category">Parcours Professionnel</li>
+              <li><a href="#brasil" class="cv-menu-link">Poste Actuel : Brésil</a></li>
+              <li><a href="#francia" class="cv-menu-link">Expérience en France</a></li>
+              <li><a href="#argentina" class="cv-menu-link">Bases & Débuts : Argentine</a></li>
+              
+              <!-- CATEGORÍA 3 -->
+              <li class="cv-menu-category">Informations Complémentaires</li>
+              <li><a href="#intereses" class="cv-menu-link">Intérêts & Projets</a></li>
+              <li><a href="#contacto-final" class="cv-menu-link">Contact</a></li>
+
+            </ul>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- COLUMNA DERECHA: SECCIÓN DE CONTENIDO Y TARJETAS (75%) -->
+      <main class="cv-content-area">
+        
+        <!-- ==========================================
+             1. PERFIL Y HABILIDADES
+             ========================================== -->
+        <div id="sobre-mi" class="cv-section-card">
+          <h3 class="cv-section-headline">À propos de moi</h3>
+          
+          <article class="cv-timeline-item">
+            <p class="cv-item-desc" style="font-weight: 600; margin-bottom: 1rem;">
+              Derrière le code et les systèmes se trouvent une solide base administrative et una grande capacité d'adaptation.
+            </p>
+            
+            <p class="cv-item-desc" style="margin-bottom: 1rem;">
+              Avoir vécu et travaillé dans trois pays différents (Argentine, France et Brésil) m'a appris à évoluer avec aisance dans des environnements en constante évolution, à résoudre des imprévus sous pression et à communiquer efficacement en trois langues.
+            </p>
+
+            <p class="cv-item-desc" style="margin-bottom: 1.5rem;">
+              Aujourd'hui, j'applique cette polyvalence au monde de l'IT en tant que <strong>Support Analyst</strong> et <strong>Développeur Full Stack Jr.</strong>, en apportant una vision globale qui vise non seulement à faire fonctionner la technologie, mais aussi à comprendre le processus et le besoin opérationnel sous-jacents.
+            </p>
+
+            <p class="cv-item-desc" style="margin-bottom: 0.5rem;">
+              📍 <strong>Localisation actuelle :</strong> São Paulo, Brésil 🇧🇷
+            </p>
+            <p class="cv-item-desc" style="margin-bottom: 0.5rem;">
+              🗣️ <strong>Langues :</strong> Espagnol (Lieu de naissance / Maternelle) | Portugais (Avancé) | Français (Professionnel)
+            </p>
+            <p class="cv-item-desc">
+              🎯 <strong>Objectif :</strong> Support Technique L1/L2, Développement Web & Optimisation des Processus
+            </p>
+          </article>
+        </div>
+
+        <!-- ==========================================
+             COMPETENCIAS & HABILIDADES
+             ========================================== -->
+        <div id="competencias" class="cv-section-card">
+          <h3 class="cv-section-headline">Compétences & Aptitudes</h3>
+
+          <article class="cv-timeline-item" style="margin-bottom: 1.25rem;">
+            <div class="cv-item-header">
+              <h4 class="cv-item-role">🛠️ Support Technique, Systèmes & ITSM</h4>
+            </div>
+            <p class="cv-item-desc">
+              Prise en charge et gestion des tickets L1/L2 (Jira, ServiceNow), diagnostic d'incidents, analyse de logs, surveillance d'applications, administration sous environnements Linux, documentation technique et assistance utilisateur.
+            </p>
+          </article>
+          
+          <article class="cv-timeline-item" style="margin-bottom: 1.25rem;">
+            <div class="cv-item-header">
+              <h4 class="cv-item-role">💻 Développement Web, Données & ETL</h4>
+            </div>
+            <p class="cv-item-desc">
+              <strong>Frontend :</strong> HTML5, CSS3, JavaScript (ES6+), Bootstrap, Canva, Design Responsive, Visual Studio Code.<br>
+              <strong>Backend & BDD :</strong> Python, Node.js, SQL (MySQL, PostgreSQL, SQLite), analyse et intégration de processus ETL vers bases de données.<br>
+              <strong>Outils & DevOps :</strong> Azure DevOps (Boards, Repos, Pipelines), Git, GitHub, intégration d'APIs REST.
+            </p>
+          </article>
+
+          <article class="cv-timeline-item" style="margin-bottom: 1.25rem;">
+            <div class="cv-item-header">
+              <h4 class="cv-item-role">🤖 Intelligence Artificielle & Productivité IT</h4>
+            </div>
+            <p class="cv-item-desc">
+              Utilisation et intégration d'outils d'IA générative (ChatGPT, Claude, Gemini, GitHub Copilot) pour accélérer le développement de code, automatiser les tâches répétitives, analyser rapidement les données/logs et générer de la documentation technique.
+            </p>
+          </article>
+          
+          <article class="cv-timeline-item" style="margin-bottom: 1.25rem;">
+            <div class="cv-item-header">
+              <h4 class="cv-item-role">📈 Gestion Administrative & Financière</h4>
+            </div>
+            <p class="cv-item-desc">
+              Gestion de la trésorerie (Cash Flow), suivi des recouvrements, comptabilité clients/fournisseurs, analyse des écarts financiers et optimisation des processus opérationnels.
+            </p>
+          </article>
+          
+          <article class="cv-timeline-item">
+            <div class="cv-item-header">
+              <h4 class="cv-item-role">👥 Leadership & Compétences Relationnelles</h4>
+            </div>
+            <p class="cv-item-desc">
+              Gestion d'équipes et de groupes de travail, travail axé sur les objectifs, communication transculturelle, grande adaptabilité et réactivité face aux imprévus opérationnels.
+            </p>
+          </article>
+        </div>
+
+        <!-- ==========================================
+             2. TRAYECTORIA PROFESIONAL
+             ========================================== -->
+        <div id="brasil" class="cv-section-card">
+          <h3 class="cv-section-headline">Poste Actuel : Brésil</h3>
+          
+          <article class="cv-timeline-item">
+            <div class="cv-item-header">
+              <h4 class="cv-item-role">Analyste Support Applicatif (LATAM)</h4>
+              <span class="cv-item-date">Mai 2025 – Présent</span>
+            </div>
+            
+            <p class="cv-item-company">
+              <strong>MC1 | AI Win The Market</strong> • São Paulo, Brésil (Hybride)
+            </p>
+
+            <p class="cv-item-desc" style="margin-bottom: 1rem;">
+              Mon arrivée au Brésil a marqué le début d'une nouvelle étape où mon profil technique et de support a franchi un cap vers une échelle multinationale. Au sein de l'équipe de support spécialisée pour les applications mobiles et web de grande consommation en Amérique latine, je contribue quotidiennement au maintien de solutions critiques pour des marques de premier plan telles que <strong>Heineken, Bydsa et Grupo Herdez</strong>.
+            </p>
+
+            <p class="cv-item-desc" style="margin-bottom: 1rem;">
+              Au quotidien, je participe au diagnostic et à la résolution d'incidents (L1/L2), à l'analyse de logs et à la requête dans les bases de données SQL pour garantir la continuité opérationnelle des systèmes. De plus, je travaille en étroite collaboration avec les équipes Projets, Développement et Ingénierie : tests des nouvelles fonctionnalités avant déploiement, soutien au développement, suivi hebdomadaire des tickets via Jira Service Desk et application des bonnes pratiques de support.
+            </p>
+
+            <p class="cv-item-desc" style="margin-bottom: 1.25rem;">
+              Cette expérience à São Paulo me permet de renforcer mes compétences techniques dans un environnement dynamique et multiculturel, tout en consolidant una communication fluide et professionnelle en portugais.
+            </p>
+
+            <p class="cv-item-desc" style="font-weight: 600; margin-bottom: 0.5rem; color: #1b2a4a;">
+              📌 Points clés du rôle & Outils :
+            </p>
+
+            <ul class="cv-item-bullets" style="padding-left: 1.2rem; margin-bottom: 1.25rem; line-height: 1.6; color: #475569;">
+              <li><strong>Gestion & Suivi :</strong> Support L1/L2, diagnostic d'incidents, analyse de logs et suivi hebdomadaire des demandes clients.</li>
+              <li><strong>Collaboration Multidisciplinaire :</strong> Travail conjoint avec les équipes Projets, Dev et Ingénierie ; participation aux tests et soutien au développement.</li>
+              <li><strong>Bases de Données & Qualité :</strong> Résolution de problèmes sous PostgreSQL, MySQL et SQLite, documentation des processus et bonnes pratiques ITSM.</li>
+              <li><strong>Langues utilisées :</strong> Portugais (environnement professionnel quotidien) et Espagnol.</li>
+            </ul>
+
+            <div class="cv-item-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Jira Service Desk</span>
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">PostgreSQL / MySQL</span>
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">SQLite</span>
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Support L1/L2</span>
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Testing & Dev Support</span>
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Bonnes Pratiques ITSM</span>
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Portugais Professionnel</span>
+            </div>
+          </article>
+        </div>
+
+        <div id="francia" class="cv-section-card">
+          <h3 class="cv-section-headline">Expérience en France</h3>
+          
+          <article class="cv-timeline-item">
+            <div class="cv-item-header">
+              <h4 class="cv-item-role">Leadership Opérationnel & Transition vers la Tech</h4>
+              <span class="cv-item-date">2023 – 2025</span>
+            </div>
+            
+            <p class="cv-item-company">
+              <strong>Monky Bar Restaurant & ConquerBlocks</strong> • Bouchemaine, France
+            </p>
+
+            <p class="cv-item-desc" style="margin-bottom: 0.8rem;">
+              Vivre en France a représenté l'un des plus grands défis personnels et professionnels de ma vie : quitter mon pays, m'adapter à una culture totalement différente et maîtriser la langue <strong>française</strong> sur le terrain.
+            </p>
+
+            <p class="cv-item-desc" style="margin-bottom: 0.8rem;">
+              J'ai débuté comme commis de cuisine et, au bout de six mois, j'ai été promu <strong>Sous-Chef</strong>, coordonnant les opérations d'un restaurant à fort flux (jusqu'à 200 couverts les week-ends). J'y ai dirigé des équipes, géré les fournisseurs, contrôlé les coûts de stock et affiné ma prise de décision sous pression et ma gestion logistique.
+            </p>
+
+            <p class="cv-item-desc" style="margin-bottom: 1.25rem;">
+              En parallèle de ce rythme exigeant, j'ai concrétisé ma reconversion professionnelle vers le secteur IT en obtenant un <strong>Master en Développement Web Full Stack</strong> chez ConquerBlocks. Au cours de cette formation intensive, j'ai développé des projets réels (notamment un Marketplace B2B et un SaaS de gestion avec synchronisation en temps réel), acquérant les technologies web qui composent mon profil technique actuel.
+            </p>
+
+            <p class="cv-item-desc" style="font-weight: 600; margin-bottom: 0.5rem; color: #1b2a4a;">
+              📌 Points clés du rôle & Outils :
+            </p>
+
+            <ul class="cv-item-bullets" style="padding-left: 1.2rem; margin-bottom: 1.25rem; line-height: 1.6; color: #475569;">
+              <li><strong>Gestion Opérationnelle & Leadership :</strong> Promotion au poste de Sous-Chef, planification d'équipe, négociation fournisseurs et contrôle des coûts.</li>
+              <li><strong>Formation Full Stack :</strong> Développement de projets pratiques intégrant React, Next.js, Node.js, Python et bases de données relationnelles (PostgreSQL/SQL).</li>
+              <li><strong>Immersion Culturelle :</strong> Maîtrise de la langue <strong>française</strong> et grande capacité d'adaptation dans des environnements internationaux.</li>
+            </ul>
+
+            <div class="cv-item-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Français Professionnel</span>
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Master Full Stack Dev</span>
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Gestion d'Équipe</span>
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">JavaScript / Node.js</span>
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">React / Next.js</span>
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Python & SQL</span>
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Visual Studio Code</span>
+            </div>
+          </article>
+        </div>
+
+        <div id="argentina" class="cv-section-card">
+          <h3 class="cv-section-headline">Bases & Débuts : Argentine</h3>
+          
+          <article class="cv-timeline-item">
+            <div class="cv-item-header">
+              <h4 class="cv-item-role">Fondations en IT, Finance & Gestion Opérationnelle</h4>
+              <span class="cv-item-date">2005 – 2022</span>
+            </div>
+            
+            <p class="cv-item-company">
+              <strong>Support IT Freelance, Novartis, Gouv. CABA & Autres</strong> • Buenos Aires, Argentine
+            </p>
+
+            <p class="cv-item-desc" style="margin-bottom: 0.8rem;">
+              L'Argentine représente la fondation sur laquelle j'ai bâti la structure de mon profil professionnel. Pendant près de deux décennies, j'y ai développé un parcours polyvalent qui a évolué de la gestion financière et de la fonction publique jusqu'à mes premiers pas consolidés dans la technologie.
+            </p>
+
+            <p class="cv-item-desc" style="margin-bottom: 0.8rem;">
+              Mon parcours technique a débuté comme <strong>Analyste Support Technique Freelance</strong>, fournissant des solutions de bases de données (SQL/PostgreSQL), le diagnostic d'incidents d'applications et la collaboration active avec <strong>Scouts de Argentina</strong> pour le support web, les tests et le déploiement du <em>Système de Gestion Cruz del Sur</em>.
+            </p>
+
+            <p class="cv-item-desc" style="margin-bottom: 1.25rem;">
+              Ce volet technique a été enrichi par una solide expérience en entreprise : j'ai occupé le poste de <em>Senior Finance Controller</em> chez <strong>Novartis</strong>, Superviseur pour le <strong>Gouvernement de CABA</strong> (encadrant una équipe de 20 agents), Superviseur Administratif chez <strong>Cerviño 3800</strong> et Responsable Crédit & Recouvrement chez <strong>Diseños JERY</strong>, en plus d'assurer la gestion logistique globale en tant que Coordinateur de Voyages.
+            </p>
+
+            <p class="cv-item-desc" style="font-weight: 600; margin-bottom: 0.5rem; color: #1b2a4a;">
+              📌 Points clés du rôle & Outils :
+            </p>
+
+            <ul class="cv-item-bullets" style="padding-left: 1.2rem; margin-bottom: 1.25rem; line-height: 1.6; color: #475569;">
+              <li><strong>Support IT & Systèmes :</strong> Analyse de logs, optimisation de requêtes SQL/PostgreSQL, tests fonctionnels et formation des utilisateurs aux systèmes de gestion.</li>
+              <li><strong>Gestion Financière & Contrôle :</strong> Trésorerie (Cash Flow), rapprochement des comptes clients/fournisseurs, analyse de crédit et contrôle des coûts d'exploitation.</li>
+              <li><strong>Leadership & Logistique :</strong> Encadrement d'équipes (20+ agents), gestion fournisseurs, organisation de voyages et direction communautaire chez Scouts de Argentina.</li>
+            </ul>
+
+            <div class="cv-item-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Support IT Freelance</span>
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">SQL / PostgreSQL</span>
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Testing & Software Deployment</span>
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Contrôle Financier & Cash Flow</span>
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Management d'Équipe (20+)</span>
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Expert Commercial (Perito Mercantil)</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- ==========================================
+             3. INFORMACIÓN ADICIONAL
+             ========================================== -->
+        <div id="intereses" class="cv-section-card">
+          <h3 class="cv-section-headline">Intérêts & Projets Personnels</h3>
+          
+          <article class="cv-timeline-item">
+            <div class="cv-item-header">
+              <h4 class="cv-item-role">Leadership Communautaire, Activités en Plein Air & Apprentissage Continu</h4>
+            </div>
+            
+            <p class="cv-item-company">
+              <strong>Philosophie de Vie & Projets Personnels</strong>
+            </p>
+
+            <p class="cv-item-desc" style="margin-bottom: 0.8rem;">
+              Ma vie professionnelle est guidée par les mêmes valeurs qui régissent mon quotidien : l'empathie, le travail d'équipe et una curiosité constante d'explorer le monde.
+            </p>
+
+            <p class="cv-item-desc" style="margin-bottom: 0.8rem;">
+              Pendant plus de 15 ans, j'ai été membre actif du <strong>Mouvement Scout d'Argentine</strong>, occupant des postes de direction clés tels que <em>Chef de Groupe</em>, <em>Directeur de District</em> et <em>Assistant Zonal Administratif</em>. Durant cette période, j'ai dirigé des équipes pluridisciplinaires, coordonné des projets avec d'autres ONG, suivi des formations en gestion organisationnelle et intelligence émotionnelle, et collaboré à la mise en place du <em>Système de Gestion Cruz del Sur</em> au niveau national.
+            </p>
+
+            <p class="cv-item-desc" style="margin-bottom: 1.25rem;">
+              En dehors du travail, je suis passionné par la mer et la navigation, titulaire du brevet officiel de <strong>Barreur de Voilier et Bateaux de Plaisance (Timonel)</strong>. J'aime voyager, découvrir de nouvelles cultures et profiter des activités en plein air. Actuellement, je concentre mes efforts sur le perfectionnement du <strong>portugais</strong> ainsi que sur le développement web et l'<strong>intégration de l'Intelligence Artificielle</strong> pour optimiser les performances techniques.
+            </p>
+
+            <p class="cv-item-desc" style="font-weight: 600; margin-bottom: 0.5rem; color: #1b2a4a;">
+              📌 Points clés & Domaines d'intérêt :
+            </p>
+
+            <ul class="cv-item-bullets" style="padding-left: 1.2rem; margin-bottom: 1.25rem; line-height: 1.6; color: #475569;">
+              <li><strong>Leadership Social :</strong> Direction de groupes, gestion des émotions, coordination de bénévoles et projets institutionnels chez Scouts de Argentina.</li>
+              <li><strong>Navigation & Nature :</strong> Barreur certifié (voile et moteur), passionné par les voyages, la santé physique et la vie en plein air.</li>
+              <li><strong>Développement & Innovation :</strong> Immersion linguistique en portugais, création de projets web et expérimentation avec l'IA.</li>
+            </ul>
+
+            <div class="cv-item-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Leadership Communautaire</span>
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Intelligence Émotionnelle</span>
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Barreur (Voile & Moteur)</span>
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Plein Air & Voyages</span>
+              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">IA Appliquée & Web Dev</span>
+            </div>
+          </article>
+        </div>
+
+       <!-- SECCIÓN Y CTA FINAL DE CONTACTO -->
+        <div id="contacto-final" class="cv-section-card cv-bottom-cta">
+          <p class="cta-text" style="font-weight: 700; font-size: 1.15rem; margin-bottom: 1.25rem;">
+            Mon profil vous intéresse ou vous avez un projet en tête ?
+          </p>
+
+          <!-- DATOS DIRECTOS DE CONTACTO -->
+          <div class="contact-direct-info" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem; margin-bottom: 1.5rem; font-size: 0.95rem; color: #475569;">
+            <div style="display: flex; align-items: center; gap: 0.4rem;">
+              <span>✉️</span>
+              <a href="mailto:contact@ahcarpinelli.me" style="color: #1b2a4a; text-decoration: none; font-weight: 600;">contact@ahcarpinelli.me</a>
+            </div>
+            
+            <div style="display: flex; align-items: center; gap: 0.4rem;">
+              <span>📞</span>
+              <!-- Redirección directa a WhatsApp -->
+              <a href="https://wa.me/5511920702442?text=Bonjour%20Alejandro,%20j'ai%20consult%C3%A9%20votre%20portfolio%20et%20souhaite%20entrer%20en%20contact." 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style="color: #1b2a4a; text-decoration: none; font-weight: 600;">
+                +55 11 92070-2442
+              </a>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 0.4rem;">
+              <span>💼</span>
+              <a href="https://www.linkedin.com/in/alejandro-carpinelli-a480b863/" target="_blank" rel="noopener noreferrer" style="color: #1b2a4a; text-decoration: none; font-weight: 600;">LinkedIn</a>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 0.4rem;">
+              <span>📍</span>
+              <span style="font-weight: 500;">São Paulo, SP, Brésil</span>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-primary btn-contacto-modal">Discutons / Me Contacter</button>
+        </div>
+        
+      </main>
+
+    </section>
+
+  </div> <!-- FIN DE PAGE-CONTENT -->
+
+
+  <!-- ==========================================
+       VENTANA EMERGENTE (MODAL DE CONTACTO)
+       ========================================== -->
+  <div id="modal-contacto" class="modal-overlay">
+    <div class="modal-card">
+      <button id="btn-cerrar-modal" class="modal-close" aria-label="Fermer">&times;</button>
+      
+      <!-- VISTA 1: SELECCIÓN INICIAL -->
+      <div id="modal-step-1" class="modal-step active">
+        <h3 class="modal-title">Discutons</h3>
+        <div class="modal-options">
+          
+          <!-- BOTÓN EMAIL (ABRE EL FORMULARIO) -->
+          <button type="button" id="btn-opcion-email" class="contact-option">
+            <div class="icon-wrapper">
+              <img src="/Imagenes/LOGO_EMAIL.png" alt="Envoyer un e-mail" class="modal-icon-img">
+            </div>
+            <span class="option-text">Envoyer un e-mail</span>
+          </button>
+
+          <!-- BOTÓN WHATSAPP (DIRECTO) -->
+          <a href="https://wa.me/5511920702442?text=Bonjour%20Alejandro,%20j'ai%20consult%C3%A9%20votre%20portfolio%20et%20souhaite%20entrer%20en%20contact." target="_blank" rel="noopener noreferrer" class="contact-option">
+            <div class="icon-wrapper">
+              <img src="/Imagenes/LOGO_WP.png" alt="Envoyer un WhatsApp" class="modal-icon-img">
+            </div>
+            <span class="option-text">Envoyer un WhatsApp</span>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- VISTA 2: FORMULARIO DE EMAIL -->
+      <div id="modal-step-2" class="modal-step">
+        <div class="modal-header-form">
+          <button type="button" id="btn-volver-modal" class="modal-back-btn">&larr; Retour</button>
+          <h3 class="modal-title-form">Envoyer un message</h3>
+        </div>
+
+        <form id="contact-form" class="modal-form">
+          <div class="form-group">
+            <label for="nombre">Nom et Prénom *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ex: Jean Dupont" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail de contact *</label>
+            <input type="email" id="email" name="email" placeholder="exemple@entreprise.com" required>
+          </div>
+
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="telefono">Téléphone *</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="+33 6 ..." required>
+            </div>
+
+            <div class="form-group">
+              <label for="empresa">Entreprise / Organisme *</label>
+              <input type="text" id="empresa" name="empresa" placeholder="Nom de l'entreprise" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="mensaje">Message *</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required>Bonjour Alejandro, j'ai consulté votre profil et souhaiterais entrer en contact avec vous.</textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit-form">Envoyer l'e-mail</button>
+        </form>
+      </div>
+
+      <!-- VISTA 3: MENSAJE DE ENVIADO Y CUENTA REGRESIVA -->
+      <div id="modal-step-3" class="modal-step">
+        <div class="modal-success-content">
+          <div class="success-icon">✓</div>
+          <h3 class="modal-title">Merci pour votre message !</h3>
+          <p class="success-desc">Je vous recontacterai rapidement.</p>
+          <div class="countdown-wrapper">
+            <span>Fermeture de la fenêtre dans <strong id="countdown-timer">3</strong> secondes...</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BARRA DE NAVEGACIÓN FIJA EN MOBILE -->
+  <nav class="mobile-bottom-nav">
+    <a href="#sobre-mi" class="mobile-nav-item">
+      <span>À propos</span>
+    </a>
+    <a href="#brasil" class="mobile-nav-item">
+      <span>Parcours</span>
+    </a>
+    <a href="#intereses" class="mobile-nav-item">
+      <span>Info</span>
+    </a>
+    <a href="javascript:void(0)" class="mobile-nav-item btn-contacto-modal">
+      <span>Contact</span>
+    </a>
+  </nav>
+
+</body>
+</html>

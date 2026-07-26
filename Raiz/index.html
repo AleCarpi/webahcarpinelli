@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alejandro Carpinelli | Welcome</title>
+  <link rel="stylesheet" href="welcome-style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="welcome-body">
+
+  <main class="welcome-card">
+    
+    <!-- FOTO DE PERFIL -->
+    <div class="avatar-container">
+      <img src="Imagenes/Foto_perfil2.webp" alt="Alejandro Carpinelli" class="welcome-avatar">
+    </div>
+
+    <!-- NOMBRE Y ROL -->
+    <h1 class="welcome-name">Alejandro Carpinelli</h1>
+    <p class="welcome-title">Application Support Analyst | Full Stack Developer</p>
+
+    <!-- CAJA ÚNICA DE MENSAJE DINÁMICO -->
+    <div class="welcome-message-box">
+        <div class="msg-slider" id="msg-slider">
+        <p id="dynamic-text">Bienvenido a mi CV. Si estás aquí es porque quieres saber más de mí.</p>
+        <p id="dynamic-ask" class="msg-ask">¿En qué idioma quieres que hablemos?</p>
+        </div>
+    </div>
+
+    <!-- GRID DE BANDERAS -->
+    <div class="lang-grid">
+        <!-- 1. Español -->
+        <a href="/es/" class="lang-card active" data-lang="es">
+            <img src="Imagenes/world.png" alt="Español" class="lang-flag-img">
+            <div class="lang-info">
+                <span class="lang-name">Español</span>
+                <span class="lang-sub">Ingresar</span>
+            </div>
+        </a>
+
+        <!-- 2. Português -->
+        <a href="/pt/" class="lang-card" data-lang="pt">
+            <img src="Imagenes/round.png" alt="Português" class="lang-flag-img">
+            <div class="lang-info">
+                <span class="lang-name">Português</span>
+                <span class="lang-sub">Entrar</span>
+            </div>
+        </a>
+
+        <!-- 3. English -->
+        <a href="/en/" class="lang-card" data-lang="en">
+            <img src="Imagenes/flag (1).png" alt="English" class="lang-flag-img">
+            <div class="lang-info">
+                <span class="lang-name">English</span>
+                <span class="lang-sub">Enter</span>
+            </div>
+        </a>
+
+        <!-- 4. Français -->
+        <a href="/fr/" class="lang-card" data-lang="fr">
+            <img src="Imagenes/flag.png" alt="Français" class="lang-flag-img">
+            <div class="lang-info">
+                <span class="lang-name">Français</span>
+                <span class="lang-sub">Entrer</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="welcome-footer">
+      <span>📍 São Paulo, SP, Brasil</span>
+    </footer>
+
+  </main>
+
+  <script src="welcome-script.js"></script>
+</body>
+</html>
