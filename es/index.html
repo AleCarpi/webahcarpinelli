@@ -1,514 +1,153 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alejandro Carpinelli - Portfolio</title>
-  <link rel="icon" href="data:,">
-  <!-- CSS con parámetro de versión para evitar problemas de caché -->
-  <link rel="stylesheet" href="../style.css">
-  
-  <!-- Cargar EmailJS v4 -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-  <!-- Cargar script JS de la app -->
-  <script src="../script.js?v=102" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alejandro Carpinelli · Analista de Soporte de Aplicaciones</title>
+<meta name="description" content="Analista de Soporte de Aplicaciones L1/L2 y Full Stack Jr. en São Paulo. Disponible para remoto en Brasil, LATAM y global.">
+<link rel="canonical" href="https://ahcarpinelli.me/es/">
+<link rel="alternate" hreflang="es" href="https://ahcarpinelli.me/es/"><link rel="alternate" hreflang="pt" href="https://ahcarpinelli.me/pt/"><link rel="alternate" hreflang="en" href="https://ahcarpinelli.me/en/"><link rel="alternate" hreflang="fr" href="https://ahcarpinelli.me/fr/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Alejandro Carpinelli · Analista de Soporte de Aplicaciones">
+<meta property="og:description" content="Analista de Soporte de Aplicaciones L1/L2 y Full Stack Jr. en São Paulo. Disponible para remoto en Brasil, LATAM y global.">
+<meta property="og:url" content="https://ahcarpinelli.me/es/">
+<meta property="og:image" content="https://ahcarpinelli.me/Imagenes/Foto_perfil2.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0F172A">
+<link rel="icon" href="/Imagenes/Foto_perfil2.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/v2.css?v=207">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script>
+<script src="/v2.js?v=207" defer></script>
+<script type="application/json" id="page-data">{"faq": [{"q": "¿Quién es Alejandro?", "tag": "perfil", "a": "Analista de Soporte de Aplicaciones L1/L2 en MC1, São Paulo.\nVengo de finanzas y gestión de equipos, y me reconvertí a IT con un Master Full Stack. Entiendo tanto el sistema como el proceso de negocio detrás."}, {"q": "¿Qué problemas resolvés?", "tag": "soporte", "a": "Incidencias en apps móviles y web: análisis de logs, consultas SQL (PostgreSQL, MySQL, SQLite), tickets con SLA en Jira y ServiceNow, y testing de nuevas funcionalidades con Ingeniería."}, {"q": "¿Estás disponible?", "tag": "disponibilidad", "a": "Sí. Remoto para Brasil, LATAM o global; en Argentina y Uruguay también híbrido o presencial.\nPuedo empezar en 20 días."}, {"q": "¿En qué idiomas trabajás?", "tag": "idiomas", "a": "Español nativo, portugués avanzado y francés profesional. Inglés escrito intermedio."}, {"q": "¿Cómo te contacto?", "tag": "contacto", "a": "contact@ahcarpinelli.me · WhatsApp +55 11 92070-2442\nO abrí un ticket más abajo y te respondo en menos de 24 horas."}], "ui": {"sending": "Enviando…", "sent": "¡Ticket recibido! Te respondo en menos de 24 horas.", "error": "No se pudo enviar. Escribime a contact@ahcarpinelli.me"}}</script>
 </head>
-
 <body>
-
-  <!-- WRAPPER DE CONTENIDO PRINCIPAL (SOPORTA EL DESENFOQUE) -->
-  <div id="page-content">
-
-    <!-- HERO / ENCABEZADO PRINCIPAL -->
-    <header class="hero-header">
-      
-      <!-- SELECTOR DE IDIOMAS (Arriba a la derecha) -->
-      <div class="lang-selector">
-        <a href="/es/" class="lang-btn active">ES</a>
-        <a href="/pt/" class="lang-btn">PT</a>
-        <a href="/en/" class="lang-btn">EN</a>
-        <a href="/fr/" class="lang-btn">FR</a>
+<header class="hero">
+  <nav class="wrap topnav" aria-label="Principal">
+    <a class="brand" href="/es/"><img src="/Imagenes/Foto_perfil2.webp" alt="">ALEJANDRO CARPINELLI</a>
+    <a class="navlink" href="#trayectoria" data-open="trayectoria">Trayectoria</a>
+    <a class="navlink" href="#proyectos" data-open="proyectos">Proyectos</a>
+    <a class="navlink" href="/Pron_cv/CV_CARPINELLI_es.pdf?v=3" download>CV en PDF</a>
+    <div class="langs" role="group" aria-label="Idioma"><a href="/es/" aria-current="true">ES</a><a href="/pt/">PT</a><a href="/en/">EN</a><a href="/fr/">FR</a></div>
+  </nav>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="kicker">// mesa de ayuda personal</p>
+      <h1>Soy analista de soporte.<br>Preguntame lo que quieras.</h1>
+      <p class="lead">Elegí una pregunta y te respondo como respondo un ticket: claro, rápido y con el dato justo.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contacto">Abrir un ticket</a>
+        <a class="btn btn-ghost-dark" href="https://www.linkedin.com/in/alejandro-carpinelli-a480b863/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
-
-      <div class="hero-container">
-        
-        <!-- COLUMNA IZQUIERDA: TEXTO Y BOTONES -->
-        <div class="hero-content">
-          <h1 class="hero-title">Soy Alejandro Carpinelli</h1>
-          <h2 class="hero-subtitle">Application Support Analyst | Full Stack Developer Junior</h2>
-          <div class="hero-buttons">
-            <button type="button" class="btn btn-primary btn-contacto-modal">Contacto</button>
-            <a href="#" class="btn btn-secondary">Descargar CV</a>
-          </div>
-        </div>
-
-        <!-- COLUMNA DERECHA: FOTO / BANDERA -->
-        <div class="hero-avatar-wrapper">
-        <img src="/Imagenes/Foto_perfil2.webp"
-             alt="Alejandro Carpinelli" 
-             class="hero-avatar"
-             loading="eager"
-             fetchpriority="high">
-        </div>
-
-      </div>
-    </header>
-
-    <!-- CONTENEDOR GENERAL DE LA TRAYECTORIA -->
-    <section class="cv-layout-container">
-      
-      <!-- COLUMNA IZQUIERDA: MENÚ / ÍNDICE (25%) -->
-      <aside class="cv-sidebar-menu">
-        <div class="cv-menu-sticky">
-          <nav class="cv-nav">
-            <ul class="cv-menu-list">
-              
-              <!-- CATEGORÍA 1 -->
-              <li class="cv-menu-category">Perfil y Habilidades</li>
-              <li><a href="#sobre-mi" class="cv-menu-link active">Sobre mí</a></li>
-              <li><a href="#competencias" class="cv-menu-link">Competencias & Habilidades</a></li>
-              
-              <!-- CATEGORÍA 2 -->
-              <li class="cv-menu-category">Trayectoria Profesional</li>
-              <li><a href="#brasil" class="cv-menu-link">Actualidad: Brasil</a></li>
-              <li><a href="#francia" class="cv-menu-link">Experiencia en Francia</a></li>
-              <li><a href="#argentina" class="cv-menu-link">Base & Inicios: Argentina</a></li>
-              
-              <!-- CATEGORÍA 3 -->
-              <li class="cv-menu-category">Información Adicional</li>
-              <li><a href="#intereses" class="cv-menu-link">Intereses & Proyectos</a></li>
-              <li><a href="#contacto-final" class="cv-menu-link">Contacto</a></li>
-
-            </ul>
-          </nav>
-        </div>
-      </aside>
-
-      <!-- COLUMNA DERECHA: SECCIÓN DE CONTENIDO Y TARJETAS (75%) -->
-      <main class="cv-content-area">
-        
-        <!-- ==========================================
-             1. PERFIL Y HABILIDADES
-             ========================================== -->
-        <div id="sobre-mi" class="cv-section-card">
-          <h3 class="cv-section-headline">Sobre mí</h3>
-          
-          <article class="cv-timeline-item">
-            <p class="cv-item-desc" style="font-weight: 600; margin-bottom: 1rem;">
-              Detrás del código y los sistemas hay una sólida base administrativa y una alta capacidad de adaptación.
-            </p>
-            
-            <p class="cv-item-desc" style="margin-bottom: 1rem;">
-              Haber vivido y trabajado en tres países diferentes (Argentina, Francia y Brasil) me enseñó a moverme con solvencia en entornos cambiantes, resolver imprevistos bajo presión y comunicarme eficazmente en tres idiomas.
-            </p>
-
-            <p class="cv-item-desc" style="margin-bottom: 1.5rem;">
-              Hoy aplico esa versatilidad al mundo IT como <strong>Support Analyst</strong> y <strong>Full Stack Jr.</strong>, aportando una mirada integral que no solo busca que la tecnología funcione, sino que entienda el proceso y la necesidad operativa detrás de ella.
-            </p>
-
-            <p class="cv-item-desc" style="margin-bottom: 0.5rem;">
-              📍 <strong>Ubicación actual:</strong> São Paulo, Brasil 🇧🇷
-            </p>
-            <p class="cv-item-desc" style="margin-bottom: 0.5rem;">
-              🗣️ <strong>Idiomas:</strong> Español (Nativo) | Portugués (Avanzado) | Francés (Profesional)
-            </p>
-            <p class="cv-item-desc">
-              🎯 <strong>Enfoque:</strong> Soporte Técnico L1/L2, Desarrollo Web & Optimización de Procesos
-            </p>
-          </article>
-        </div>
-
-        <!-- ==========================================
-             COMPETENCIAS & HABILIDADES
-             ========================================== -->
-        <div id="competencias" class="cv-section-card">
-          <h3 class="cv-section-headline">Competencias & Habilidades</h3>
-
-          <article class="cv-timeline-item" style="margin-bottom: 1.25rem;">
-            <div class="cv-item-header">
-              <h4 class="cv-item-role">🛠️ Soporte Técnico, Sistemas & ITSM</h4>
+    </div>
+    <div class="hero-visual">
+      <img class="hero-photo" src="/Imagenes/Foto_perfil2.webp" alt="Alejandro Carpinelli en São Paulo">
+      <div class="chat">
+        <div class="chat-head"><span class="dot" aria-hidden="true"></span><span class="who">Alejandro está en línea</span><span class="tz">São Paulo · GMT-3</span></div>
+        <div class="chat-body">
+          <div class="chips" role="group"><li>Liderazgo de equipos</li><li>Control financiero</li><li>Créditos y cobranzas</li><li>Gestión de proyectos</li></div>
+          <div class="bubble-q" id="chat-q">¿Quién es Alejandro?</div>
+          <div class="answer" aria-live="polite">
+            <img src="/Imagenes/Foto_perfil2.webp" alt="">
+            <div class="bubble-a"><p id="chat-a">Analista de Soporte de Aplicaciones L1/L2 en MC1, São Paulo.
+Vengo de finanzas y gestión de equipos, y me reconvertí a IT con un Master Full Stack. Entiendo tanto el sistema como el proceso de negocio detrás.</p>
+              <div class="tags"><span class="tag-ok">estado: resuelto</span><span class="tag-n" id="chat-tag">perfil</span></div>
             </div>
-            <p class="cv-item-desc">
-              Atención y gestión de tickets L1/L2 (Jira, ServiceNow), diagnóstico de incidencias, análisis de logs, monitoreo de aplicaciones, administración en entornos Linux, documentación técnica y soporte al usuario final.
-            </p>
-          </article>
-          
-          <article class="cv-timeline-item" style="margin-bottom: 1.25rem;">
-            <div class="cv-item-header">
-              <h4 class="cv-item-role">💻 Desarrollo Web, Datos & ETL</h4>
-            </div>
-            <p class="cv-item-desc">
-              <strong>Frontend:</strong> HTML5, CSS3, JavaScript (ES6+), Bootstrap, Canva, Maquetado responsivo, Visual Studio Code.<br>
-              <strong>Backend & DB:</strong> Python, Node.js, SQL (MySQL, PostgreSQL, SQLite), análisis e integración de procesos ETL a Base de Datos.<br>
-              <strong>Tools & DevOps:</strong> Azure DevOps (Boards, Repos, Pipelines), Git, GitHub, integración de APIs REST.
-            </p>
-          </article>
-
-          <article class="cv-timeline-item" style="margin-bottom: 1.25rem;">
-            <div class="cv-item-header">
-              <h4 class="cv-item-role">🤖 Inteligencia Artificial & Productividad IT</h4>
-            </div>
-            <p class="cv-item-desc">
-              Uso e integración de herramientas de IA generativa (ChatGPT, Claude, Gemini, GitHub Copilot) para acelerar el desarrollo de código, automatización de tareas repetitivas, análisis rápido de datos/logs y generación de documentación técnica.
-            </p>
-          </article>
-          
-          <article class="cv-timeline-item" style="margin-bottom: 1.25rem;">
-            <div class="cv-item-header">
-              <h4 class="cv-item-role">📈 Gestión Administrativa & Financiera</h4>
-            </div>
-            <p class="cv-item-desc">
-              Control de flujo de caja (Cash Flow), gestión de cobranzas, cuentas por pagar y cobrar, análisis de discrepancias financieras y optimización de procesos operativos.
-            </p>
-          </article>
-          
-          <article class="cv-timeline-item">
-            <div class="cv-item-header">
-              <h4 class="cv-item-role">👥 Liderazgo & Habilidades Blandas</h4>
-            </div>
-            <p class="cv-item-desc">
-              Gestión de equipos y grupos de trabajo, trabajo enfocado en objetivos, comunicación multicultural, alta adaptabilidad y capacidad de respuesta ante imprevistos operativos.
-            </p>
-          </article>
-        </div>
-
-        <!-- ==========================================
-             2. TRAYECTORIA PROFESIONAL
-             ========================================== -->
-        <div id="brasil" class="cv-section-card">
-          <h3 class="cv-section-headline">Actualidad: Brasil</h3>
-          
-          <article class="cv-timeline-item">
-            <div class="cv-item-header">
-              <h4 class="cv-item-role">Analista de Soporte de Aplicaciones (LATAM)</h4>
-              <span class="cv-item-date">Mayo 2025 – Presente</span>
-            </div>
-            
-            <p class="cv-item-company">
-              <strong>MC1 | AI Win The Market</strong> • São Paulo, Brasil (Híbrido)
-            </p>
-
-            <p class="cv-item-desc" style="margin-bottom: 1rem;">
-              Llegar a Brasil marcó el inicio de una nueva etapa donde mi perfil técnico y de soporte dio un salto directo a la escala multinacional. Como parte del equipo de soporte especializado para aplicaciones móviles y web de consumo masivo en Latinoamérica, colaboro a diario en la atención de soluciones críticas para marcas líderes como <strong>Heineken, Bydsa y Grupo Herdez</strong>.
-            </p>
-
-            <p class="cv-item-desc" style="margin-bottom: 1rem;">
-              En mi día a día, participo en el diagnóstico y resolución de incidencias (L1/L2), el análisis de logs y la consulta de bases de datos SQL para garantizar la continuidad operativa de los sistemas. Además, trabajo en estrecha colaboración con los equipos de Proyectos, Desarrollo e Ingeniería: participo en el testing de nuevas funcionalidades antes de su despliegue, apoyo en tareas de desarrollo, realizo el seguimiento semanal de solicitudes vía Jira Service Desk y aplico buenas prácticas de soporte para la mejora continua del servicio.
-            </p>
-
-            <p class="cv-item-desc" style="margin-bottom: 1.25rem;">
-              Esta experiencia en São Paulo me permite afianzar mis habilidades técnicas en un entorno dinámico y multicultural, consolidando una comunicación fluida y profesional en portugués.
-            </p>
-
-            <p class="cv-item-desc" style="font-weight: 600; margin-bottom: 0.5rem; color: #1b2a4a;">
-              📌 Claves del rol & Herramientas:
-            </p>
-
-            <ul class="cv-item-bullets" style="padding-left: 1.2rem; margin-bottom: 1.25rem; line-height: 1.6; color: #475569;">
-              <li><strong>Gestión & Monitoreo:</strong> Soporte L1/L2, diagnóstico de incidencias, análisis de logs y seguimiento semanal de solicitudes con clientes.</li>
-              <li><strong>Colaboración Multidisciplinaria:</strong> Trabajo conjunto con los equipos de Proyectos, Desarrollo e Ingeniería; participación en testing de nuevas funcionalidades y apoyo en desarrollo.</li>
-              <li><strong>Bases de Datos & Calidad:</strong> Troubleshooting en PostgreSQL, MySQL y SQLite, documentación de procesos y aplicación de buenas prácticas de soporte.</li>
-              <li><strong>Idiomas en uso:</strong> Portugués (entorno profesional diario) y Español.</li>
-            </ul>
-
-            <div class="cv-item-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Jira Service Desk</span>
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">PostgreSQL / MySQL</span>
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">SQLite</span>
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Soporte L1/L2</span>
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Testing & Dev Support</span>
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Buenas Prácticas ITSM</span>
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Portugués Profesional</span>
-            </div>
-          </article>
-        </div>
-
-        <div id="francia" class="cv-section-card">
-          <h3 class="cv-section-headline">Experiencia en Francia</h3>
-          
-          <article class="cv-timeline-item">
-            <div class="cv-item-header">
-              <h4 class="cv-item-role">Liderazgo Operativo & Transición al Mundo Tech</h4>
-              <span class="cv-item-date">2023 – 2025</span>
-            </div>
-            
-            <p class="cv-item-company">
-              <strong>Monky Bar Restaurant & ConquerBlocks</strong> • Bouchemaine, Francia
-            </p>
-
-            <p class="cv-item-desc" style="margin-bottom: 0.8rem;">
-              Vivir en Francia representó uno de los mayores desafíos personales y profesionales de mi vida: salir de mi país, adaptarme a una cultura completamente diferente y dominar el idioma <strong>francés</strong> en el terreno real.
-            </p>
-
-            <p class="cv-item-desc" style="margin-bottom: 0.8rem;">
-              Comencé como ayudante de cocina y a los seis meses ascendí a <strong>Sub-Chef</strong>, coordinando la operación de un restaurante de alto flujo (hasta 200 cubiertos los fines de semana). Allí lideré equipos, gestioné proveedores, controlé costos de inventario y pulí mi capacidad de toma de decisiones bajo presión y coordinación logística.
-            </p>
-
-            <p class="cv-item-desc" style="margin-bottom: 1.25rem;">
-              En paralelo a este ritmo exigente, decidí impulsar mi reconversión profesional al mundo IT completando el <strong>Master en Desarrollo Web Full Stack</strong> en ConquerBlocks. Durante esta formación intensiva construí proyectos reales (incluyendo un Marketplace B2B y un SaaS de gestión con sincronización en tiempo real), adquiriendo el stack de tecnologías web que cimentó mi perfil técnico actual.
-            </p>
-
-            <p class="cv-item-desc" style="font-weight: 600; margin-bottom: 0.5rem; color: #1b2a4a;">
-              📌 Claves del rol & Herramientas:
-            </p>
-
-            <ul class="cv-item-bullets" style="padding-left: 1.2rem; margin-bottom: 1.25rem; line-height: 1.6; color: #475569;">
-              <li><strong>Gestión Operativa & Liderazgo:</strong> Ascenso a Sub-Chef, coordinación de personal, negociación con proveedores y control de costos en gastronomía de alto volumen.</li>
-              <li><strong>Formación Full Stack:</strong> Desarrollo de proyectos prácticos integrando React, Next.js, Node.js, Python y bases de datos relacionales (PostgreSQL/SQL).</li>
-              <li><strong>Inmersión Cultural:</strong> Dominio del idioma <strong>francés</strong> y alta adaptabilidad a entornos internacionales.</li>
-            </ul>
-
-            <div class="cv-item-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Francés Profesional</span>
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Master Full Stack Dev</span>
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Liderazgo de Equipos</span>
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">JavaScript / Node.js</span>
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">React / Next.js</span>
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Python & SQL</span>
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Visual Studio Code</span>
-            </div>
-          </article>
-        </div>
-
-        <div id="argentina" class="cv-section-card">
-          <h3 class="cv-section-headline">Base & Inicios: Argentina</h3>
-          
-          <article class="cv-timeline-item">
-            <div class="cv-item-header">
-              <h4 class="cv-item-role">Cimientos en IT, Finanzas & Gestión Operativa</h4>
-              <span class="cv-item-date">2005 – 2022</span>
-            </div>
-            
-            <p class="cv-item-company">
-              <strong>Soporte IT Freelance, Novartis, Gob. CABA & Más</strong> • Buenos Aires, Argentina
-            </p>
-
-            <p class="cv-item-desc" style="margin-bottom: 0.8rem;">
-              Argentina representa la gran base donde construí la estructura de mi perfil profesional. Durante casi dos décadas desarrollé una carrera versátil que fue evolucionando desde la administración financiera y la gestión pública hasta mis primeros pasos consolidados en el mundo de la tecnología.
-            </p>
-
-            <p class="cv-item-desc" style="margin-bottom: 0.8rem;">
-              Mi trayectoria técnica comenzó como <strong>Analista de Soporte Técnico Freelance</strong>, brindando soluciones en bases de datos (SQL/PostgreSQL), diagnóstico de incidencias en apps y colaborando activamente con <strong>Scouts de Argentina</strong> en el soporte web, testing e implementación del <em>Sistema de Gestión Cruz del Sur</em>.
-            </p>
-
-            <p class="cv-item-desc" style="margin-bottom: 1.25rem;">
-              Esta etapa técnica se complementa con una amplia experiencia corporativa: me desempeñé como <em>Senior Finanzas Controller</em> en <strong>Laboratorio Novartis</strong>, Supervisor en el <strong>Gobierno de la CABA</strong> (liderando un equipo de 20 agentes), Supervisor Administrativo en <strong>Cerviño 3800</strong> (control de costos y flujo de caja) y Responsable de Créditos y Cobranzas en <strong>Diseños JERY</strong>, además de gestionar logística integral como Coordinador de Viajes.
-            </p>
-
-            <p class="cv-item-desc" style="font-weight: 600; margin-bottom: 0.5rem; color: #1b2a4a;">
-              📌 Claves del rol & Herramientas:
-            </p>
-
-            <ul class="cv-item-bullets" style="padding-left: 1.2rem; margin-bottom: 1.25rem; line-height: 1.6; color: #475569;">
-              <li><strong>Soporte IT & Sistemas:</strong> Análisis de logs, optimización de consultas SQL/PostgreSQL, testing funcional y capacitación de usuarios en sistemas de gestión.</li>
-              <li><strong>Gestión Financiera & Control:</strong> Flujo de caja (Cash Flow), conciliación de cuentas por cobrar/pagar, análisis crediticio y control de costos operativos (CMV).</li>
-              <li><strong>Liderazgo & Logística:</strong> Coordinación de equipos (20+ agentes), gestión de proveedores, organización de viajes y dirección comunitaria en Scouts de Argentina.</li>
-            </ul>
-
-            <div class="cv-item-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Soporte IT Freelance</span>
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">SQL / PostgreSQL</span>
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Testing & Software Deployment</span>
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Control Financiero & Cash Flow</span>
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Liderazgo de Equipos (20+)</span>
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Perito Mercantil</span>
-            </div>
-          </article>
-        </div>
-
-        <!-- ==========================================
-             3. INFORMACIÓN ADICIONAL
-             ========================================== -->
-        <div id="intereses" class="cv-section-card">
-          <h3 class="cv-section-headline">Intereses & Proyectos Personales</h3>
-          
-          <article class="cv-timeline-item">
-            <div class="cv-item-header">
-              <h4 class="cv-item-role">Liderazgo Comunitario, Vida al Aire Libre & Aprendizaje Continuo</h4>
-            </div>
-            
-            <p class="cv-item-company">
-              <strong>Filosofía de Vida & Proyectos Personales</strong>
-            </p>
-
-            <p class="cv-item-desc" style="margin-bottom: 0.8rem;">
-              Mi vida profesional está impulsada por los mismos valores que rigen mi día a día: la empatía, el trabajo en equipo y una curiosidad constante por explorar el mundo.
-            </p>
-
-            <p class="cv-item-desc" style="margin-bottom: 0.8rem;">
-              Durante más de 15 años formé parte activa del <strong>Movimiento Scout de Argentina</strong>, ocupando roles directivos clave como <em>Jefe de Grupo</em>, <em>Director de Distrito</em> y <em>Asistente Zonal Administrativo</em>. En esta etapa lideré equipos multidisciplinarios, coordiné proyectos con otras ONGs, me capacité en dirección organizacional e inteligencia emocional, y colaboré con el equipo nacional en la implementación del <em>Sistema de Gestión Cruz del Sur</em>.
-            </p>
-
-            <p class="cv-item-desc" style="margin-bottom: 1.25rem;">
-              Fuera de la oficina, soy un apasionado por el mar y la navegación, contando con formación oficial como <strong>Timonel de Velero y Embarcaciones Deportivas</strong>. Adoro viajar, descubrir nuevas culturas y disfrutar de la vida al aire libre. Actualmente enfoco mi energía en perfeccionar mi <strong>portugués</strong> y potenciar mis conocimientos en desarrollo web e <strong>integración de Inteligencia Artificial</strong> para optimizar el rendimiento técnico.
-            </p>
-
-            <p class="cv-item-desc" style="font-weight: 600; margin-bottom: 0.5rem; color: #1b2a4a;">
-              📌 Claves & Áreas de Interés:
-            </p>
-
-            <ul class="cv-item-bullets" style="padding-left: 1.2rem; margin-bottom: 1.25rem; line-height: 1.6; color: #475569;">
-              <li><strong>Liderazgo Social:</strong> Dirección de grupos, gestión de emociones, coordinación de voluntariado y proyectos institucionales en Scouts de Argentina.</li>
-              <li><strong>Navegación & Naturaleza:</strong> Timonel de embarcaciones a vela y motor, apasionado por los viajes, el bienestar físico y las actividades al aire libre.</li>
-              <li><strong>Crecimiento & Innovación:</strong> Inmersión lingüística en portugués, desarrollo de proyectos web y experimentación con Inteligencia Artificial.</li>
-            </ul>
-
-            <div class="cv-item-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Liderazgo Comunitario</span>
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Inteligencia Emocional</span>
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Timonel (Vela & Motor)</span>
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">Vida al Aire Libre & Viajes</span>
-              <span style="background-color: #f1f5f9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500;">IA Aplicada & Web Dev</span>
-            </div>
-          </article>
-        </div>
-
-       <!-- SECCIÓN Y CTA FINAL DE CONTACTO -->
-        <div id="contacto-final" class="cv-section-card cv-bottom-cta">
-          <p class="cta-text" style="font-weight: 700; font-size: 1.15rem; margin-bottom: 1.25rem;">
-            ¿Te interesa mi perfil o tenés algún proyecto en mente?
-          </p>
-
-          <!-- DATOS DIRECTOS DE CONTACTO -->
-          <div class="contact-direct-info" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem; margin-bottom: 1.5rem; font-size: 0.95rem; color: #475569;">
-            <div style="display: flex; align-items: center; gap: 0.4rem;">
-              <span>✉️</span>
-              <a href="mailto:contact@ahcarpinelli.me" style="color: #1b2a4a; text-decoration: none; font-weight: 600;">contact@ahcarpinelli.me</a>
-            </div>
-            
-            <div style="display: flex; align-items: center; gap: 0.4rem;">
-              <span>📞</span>
-              <!-- Redirección directa a WhatsApp -->
-              <a href="https://wa.me/5511920702442?text=Hola%20Alejandro,%20vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20contactarte." 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                style="color: #1b2a4a; text-decoration: none; font-weight: 600;">
-                +55 11 92070-2442
-              </a>
-            </div>
-
-            <div style="display: flex; align-items: center; gap: 0.4rem;">
-              <span>💼</span>
-              <a href="https://www.linkedin.com/in/alejandro-carpinelli-a480b863/" target="_blank" rel="noopener noreferrer" style="color: #1b2a4a; text-decoration: none; font-weight: 600;">LinkedIn</a>
-            </div>
-
-            <div style="display: flex; align-items: center; gap: 0.4rem;">
-              <span>📍</span>
-              <span style="font-weight: 500;">São Paulo, SP, Brasil</span>
-            </div>
-          </div>
-
-          <button type="button" class="btn btn-primary btn-contacto-modal">Hablemos / Contáctame</button>
-        </div>
-        
-      </main>
-
-    </section>
-
-  </div> <!-- FIN DE PAGE-CONTENT -->
-
-
-  <!-- ==========================================
-       VENTANA EMERGENTE (MODAL DE CONTACTO)
-       ========================================== -->
-  <div id="modal-contacto" class="modal-overlay">
-    <div class="modal-card">
-      <button id="btn-cerrar-modal" class="modal-close" aria-label="Cerrar">&times;</button>
-      
-      <!-- VISTA 1: SELECCIÓN INICIAL -->
-      <div id="modal-step-1" class="modal-step active">
-        <h3 class="modal-title">Hablemos</h3>
-        <div class="modal-options">
-          
-          <!-- BOTÓN EMAIL (ABRE EL FORMULARIO) -->
-          <button type="button" id="btn-opcion-email" class="contact-option">
-            <div class="icon-wrapper">
-              <img src="/Imagenes/LOGO_EMAIL.png" alt="Enviar Email" class="modal-icon-img">
-            </div>
-            <span class="option-text">Enviar email</span>
-          </button>
-
-          <!-- BOTÓN WHATSAPP (DIRECTO) -->
-          <a href="https://wa.me/5511920702442?text=Hola%20Alejandro,%20vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20contactarte." target="_blank" rel="noopener noreferrer" class="contact-option">
-            <div class="icon-wrapper">
-              <img src="/Imagenes/LOGO_WP.png" alt="Enviar WhatsApp" class="modal-icon-img">
-            </div>
-            <span class="option-text">Enviar WhatsApp</span>
-          </a>
-
-        </div>
-      </div>
-
-      <!-- VISTA 2: FORMULARIO DE EMAIL -->
-      <div id="modal-step-2" class="modal-step">
-        <div class="modal-header-form">
-          <button type="button" id="btn-volver-modal" class="modal-back-btn">&larr; Volver</button>
-          <h3 class="modal-title-form">Enviar Mensaje</h3>
-        </div>
-
-        <form id="contact-form" class="modal-form">
-          <div class="form-group">
-            <label for="nombre">Nombre y Apellido *</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email de contacto *</label>
-            <input type="email" id="email" name="email" placeholder="ejemplo@empresa.com" required>
-          </div>
-
-          <div class="form-group-row">
-            <div class="form-group">
-              <label for="telefono">Teléfono *</label>
-              <input type="tel" id="telefono" name="telefono" placeholder="+54 11 ..." required>
-            </div>
-
-            <div class="form-group">
-              <label for="empresa">Empresa / Organismo *</label>
-              <input type="text" id="empresa" name="empresa" placeholder="Nombre de la empresa" required>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="mensaje">Mensaje *</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required>Hola Alejandro, vi tu cv y me gustaría contactarte.</textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-submit-form">Enviar Email</button>
-        </form>
-      </div>
-
-      <!-- VISTA 3: MENSAJE DE ENVIADO Y CUENTA REGRESIVA -->
-      <div id="modal-step-3" class="modal-step">
-        <div class="modal-success-content">
-          <div class="success-icon">✓</div>
-          <h3 class="modal-title">¡Gracias por tu mensaje!</h3>
-          <p class="success-desc">En breve me pondré en contacto contigo.</p>
-          <div class="countdown-wrapper">
-            <span>Cerrando ventana en <strong id="countdown-timer">3</strong> segundos...</span>
           </div>
         </div>
       </div>
-
     </div>
   </div>
+</header>
 
-  <!-- BARRA DE NAVEGACIÓN FIJA EN MOBILE -->
-  <nav class="mobile-bottom-nav">
-    <a href="#sobre-mi" class="mobile-nav-item">
-      <span>Sobre mí</span>
-    </a>
-    <a href="#brasil" class="mobile-nav-item">
-      <span>Trayectoria</span>
-    </a>
-    <a href="#intereses" class="mobile-nav-item">
-      <span>Adicional</span>
-    </a>
-    <a href="javascript:void(0)" class="mobile-nav-item btn-contacto-modal">
-      <span>Contacto</span>
-    </a>
-  </nav>
+<section class="wrap status" aria-label="Status"><div class="status-grid"><div><p class="k">Disponibilidad</p><p class="v"><span class="d" aria-hidden="true"></span>Inicio en 20 días</p></div><div><p class="k">Modalidad</p><p class="v">Remoto · Brasil, LATAM, global</p></div><div><p class="k">Idiomas</p><p class="v">ES · PT · FR · EN escrito</p></div><div><p class="k">Rol actual</p><p class="v">Soporte L1/L2 · MC1</p></div></div></section>
 
+<nav class="tabbar" aria-label="Secciones"><div class="wrap" role="tablist"><button type="button" class="tab" role="tab" data-panel="trayectoria" aria-controls="trayectoria" aria-selected="true">Trayectoria</button><button type="button" class="tab" role="tab" data-panel="proyectos" aria-controls="proyectos" aria-selected="false">Proyectos</button><button type="button" class="tab" role="tab" data-panel="herramientas" aria-controls="herramientas" aria-selected="false">Herramientas</button><button type="button" class="tab" role="tab" data-panel="personal" aria-controls="personal" aria-selected="false">Fuera del ticket</button></div></nav>
+
+<main>
+  <section id="trayectoria" class="panel wrap" role="tabpanel">
+    <div class="panel-head"><h2 class="h2">Tres países, tres etapas.</h2><p class="sub">Cada etapa sumó algo distinto: gestión y finanzas en Argentina, liderazgo bajo presión en Francia, soporte de apps a escala en Brasil.</p></div>
+    <div class="stages">
+      <article class="stage">
+        <img class="stage-thumb" src="/Imagenes/saopau.webp" alt="São Paulo, Brasil" loading="lazy">
+        <div class="stage-main"><div class="route"><span class="c">Francia</span><span class="line" aria-hidden="true"></span><span class="c to">Brasil</span><span class="now">en curso</span></div><h3>Analista de Soporte de Aplicaciones LATAM · MC1</h3><p>Soporte L1/L2 a apps móviles y web de consumo masivo para Heineken, Bydsa y Grupo Herdez. Logs, SQL, Jira Service Desk y testing de nuevas funcionalidades con Ingeniería.</p></div>
+        <div class="stage-stub"><span>LUGAR<strong>São Paulo, Brasil</strong></span><span>PERÍODO<strong>Mayo 2025 – hoy</strong></span><span>LO QUE SUMÉ<strong>Portugués avanzado</strong></span></div>
+      </article>
+      <article class="stage">
+        <img class="stage-thumb" src="/Imagenes/paris.jpg" alt="Francia" loading="lazy">
+        <div class="stage-main"><div class="route"><span class="c">Argentina</span><span class="line" aria-hidden="true"></span><span class="c to">Francia</span></div><h3>Sub-Chef y líder operativo · Master Full Stack</h3><p>De ayudante a Sub-Chef en seis meses, coordinando un restaurante de hasta 200 cubiertos. En paralelo, el Master Full Stack en ConquerBlocks y la reconversión a IT.</p></div>
+        <div class="stage-stub"><span>LUGAR<strong>Francia</strong></span><span>PERÍODO<strong>2023 – 2025</strong></span><span>LO QUE SUMÉ<strong>Francés profesional</strong></span></div>
+      </article>
+      <article class="stage">
+        <img class="stage-thumb" src="/Imagenes/bsas.webp" alt="Buenos Aires, Argentina" loading="lazy">
+        <div class="stage-main"><div class="route"><span class="c to">Argentina</span><span class="start">punto de partida</span></div><h3>Soporte IT freelance, finanzas y gestión</h3><p>Analista técnico freelance (SQL, apps web, sistema Cruz del Sur), Sr. Finance Controller en Laboratorio Novartis, supervisor de 20 agentes en el Gobierno de la CABA y responsable de créditos y cobranzas.</p></div>
+        <div class="stage-stub"><span>LUGAR<strong>Buenos Aires, Argentina</strong></span><span>PERÍODO<strong>2009 – 2023</strong></span><span>LO QUE SUMÉ<strong>Gestión de equipos y finanzas</strong></span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="proyectos" class="panel wrap" role="tabpanel">
+    <div class="panel-head"><h2 class="h2">Tickets que cerré por mi cuenta.</h2><p class="sub">Proyectos propios y de trabajo, contados como lo que son: un problema y cómo lo resolví.</p></div>
+    <div class="proj-grid">
+      <article class="proj-feat"><div class="txt">
+        <p class="n">#001 · destacado</p><h3>Dashboard de gestión de tickets</h3>
+        <p><strong>Problema:</strong> tickets repartidos entre Jira y ServiceNow, seguidos a mano.</p>
+        <p><strong>Solución:</strong> Node.js/Express con la API de Jira y un script que normaliza ServiceNow, todo en una vista con Chart.js.</p>
+        <p><strong>Resultado:</strong> volumen, estado y SLA por cliente sin planillas manuales.</p>
+        <p class="stack">Node.js · Express · Jira API · ServiceNow · Chart.js · SheetJS</p>
+        <p class="note">Proyecto interno · captura real con datos sensibles ocultos</p>
+      </div><div class="shot"><a class="frame" href="/Imagenes/dashboard-tickets-v2.webp" target="_blank" rel="noopener"><span class="bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="/Imagenes/dashboard-tickets-v2.webp" alt="Captura del dashboard de gestión de tickets con SLA, incidentes y gráficos por mes" width="1353" height="563" loading="lazy"></a></div></article>
+      <article class="proj proj-ai"><p class="n">#002 · nuevo</p><h3>Automatización y gestión con IA</h3><dl class="ps"><div class="ps-p"><dt>Problema</dt><dd>Buscar, filtrar y dar seguimiento a información de muchas fuentes se comía horas cada semana, siempre con el riesgo de que algo se pasara.</dd></div><div class="ps-s"><dt>Solución</dt><dd>Procesos con IA que se ejecutan solos varias veces al día, aplican reglas de negocio y vuelcan todo en un tablero con historial de estados y alertas. Lo que llevaba horas ahora se revisa en minutos.</dd></div></dl><p class="stack">Agentes de IA · Tareas programadas · Integración con correo · Tablero en tiempo real</p></article>
+      <article class="proj"><p class="n">#003</p><h3>Rutina y Plato</h3><dl class="ps"><div class="ps-p"><dt>Problema</dt><dd>Sostener una rutina de alimentación y entrenamiento cuesta cuando no hay nadie que te acompañe.</dd></div><div class="ps-s"><dt>Solución</dt><dd>Una app instalable con un coach de IA (Gemini) que sigue tus rutinas, te asesora y se adapta a vos: objetivos, comidas y entrenamientos a tu medida. Bilingüe ES/PT y en uso por testers reales.</dd></div></dl><a href="/app/" target="_blank" rel="noopener">Probar la app</a></article>
+      <article class="proj"><p class="n">#004</p><h3>Marketplace B2B y SaaS</h3><dl class="ps"><div class="ps-p"><dt>Problema</dt><dd>Ventas entre empresas atadas a planillas, idas y vueltas por mail y procesos lentos.</dd></div><div class="ps-s"><dt>Solución</dt><dd>Un marketplace y una plataforma SaaS con sincronización en tiempo real que modernizan el canal de ventas y aceleran cada paso, del pedido al seguimiento. React, Next.js, Node.js y PostgreSQL.</dd></div></dl></article>
+      <article class="proj"><p class="n">#005</p><h3>Sistema Cruz del Sur</h3><dl class="ps"><div class="ps-p"><dt>Problema</dt><dd>Una institución centenaria que necesitaba dejar atrás la gestión tradicional sin perder a nadie en el camino.</dd></div><div class="ps-s"><dt>Solución</dt><dd>Testing, capacitación de usuarios y despliegue del sistema Cruz del Sur, que llevó la gestión de Scouts de Argentina a lo digital y la puso a la vanguardia.</dd></div></dl></article>
+      <article class="proj"><p class="n">#006</p><h3>Este sitio</h3><dl class="ps"><div class="ps-p"><dt>Problema</dt><dd>Contar una trayectoria en tres países y varias profesiones en un solo lugar, sin que sea un CV más.</dd></div><div class="ps-s"><dt>Solución</dt><dd>Un sitio hecho a mano, en cuatro idiomas, pensado como una mesa de ayuda: preguntás y te respondo. HTML, CSS y JavaScript, con formulario por EmailJS y agenda en Google Apps Script.</dd></div></dl><a href="https://github.com/AleCarpi/webahcarpinelli" target="_blank" rel="noopener">Ver código en GitHub</a></article>
+    </div>
+  </section>
+
+  <section id="herramientas" class="panel wrap" role="tabpanel">
+    <div class="panel-head"><h2 class="h2">Mi caja de herramientas</h2><p class="sub">Ordenada por para qué la uso: del ticket del día a la automatización con IA. <span class="tb-count">32 herramientas · 5 áreas</span></p></div>
+    <div class="tb-grid">
+      <article class="tb-card tb-main"><header class="tb-top"><span class="tb-cmd">~/soporte</span><span class="tb-badge"><span class="d" aria-hidden="true"></span>uso diario</span></header><h3>Soporte y operación</h3><p>Lo que uso todos los días en MC1.</p><ul class="tb-list"><li>Jira Service Desk</li><li>ServiceNow</li><li>Logs y troubleshooting</li><li>Gestión de SLA</li><li>Testing funcional</li><li>Capacitación de usuarios</li></ul><p class="tb-foot"><span>Clientes que atiendo</span>Heineken · Bydsa · Grupo Herdez</p></article>
+      <article class="tb-card"><header class="tb-top"><span class="tb-cmd">~/datos</span><span class="tb-num">08</span></header><h3>Datos y reportes</h3><p>Para convertir tickets en decisiones.</p><ul class="tb-list"><li>SQL</li><li>PostgreSQL</li><li>MySQL</li><li>SQLite</li><li>Power BI</li><li>Excel avanzado</li><li>Chart.js</li><li>SheetJS</li></ul></article>
+      <article class="tb-card"><header class="tb-top"><span class="tb-cmd">~/desarrollo</span><span class="tb-num">09</span></header><h3>Desarrollo</h3><p>Lo que aprendí en el Master y aplico en mis proyectos.</p><ul class="tb-list"><li>JavaScript</li><li>Node.js · Express</li><li>React · Next.js</li><li>HTML · CSS</li><li>Python</li><li>APIs REST</li><li>Git · GitHub</li><li>Azure DevOps</li><li>Linux</li></ul></article>
+      <article class="tb-card"><header class="tb-top"><span class="tb-cmd">~/ia</span><span class="tb-num">05</span></header><h3>IA y automatización</h3><p>Para que lo repetitivo se haga solo.</p><ul class="tb-list"><li>IA generativa (Gemini, Claude)</li><li>Agentes y tareas programadas</li><li>Google Apps Script</li><li>EmailJS</li><li>Integraciones por API</li></ul></article>
+      <article class="tb-card"><header class="tb-top"><span class="tb-cmd">~/gestion</span><span class="tb-num">04</span></header><h3>Gestión y negocio</h3><p>Lo que traigo de antes de IT.</p><ul class="tb-list"><li>Liderazgo de equipos</li><li>Control financiero</li><li>Créditos y cobranzas</li><li>Gestión de proyectos</li></ul></article>
+    </div>
+  </section>
+
+  <section id="personal" class="panel wrap" role="tabpanel">
+    <div class="personal">
+      <img src="/Imagenes/sobremi.webp" alt="Alejandro al aire libre" loading="lazy">
+      <div class="txt"><p class="k">// fuera del ticket</p><h2 class="h2">Scout, timonel y viajero.</h2><p>Más de 15 años en el Movimiento Scout de Argentina como Jefe de Grupo, Director de Distrito y Asistente Zonal: equipos de voluntarios, proyectos con otras ONGs y mucha inteligencia emocional.</p><p>Fuera de la oficina me encuentran en el agua: tengo formación de Timonel de velero y embarcaciones deportivas. Me gusta viajar, conocer culturas y la vida al aire libre.</p><div class="pills"><span class="pill">Liderazgo comunitario</span><span class="pill">Timonel (vela y motor)</span><span class="pill">Viajes y aire libre</span></div></div>
+    </div>
+  </section>
+</main>
+
+<footer id="contacto" class="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-copy">
+      <h2 class="h2">Abrí un ticket.</h2>
+      <p>Una vacante, un proyecto o una pregunta. Respondo en menos de 24 horas.</p>
+      <p class="mono"><a href="mailto:contact@ahcarpinelli.me">contact@ahcarpinelli.me</a><br><a href="tel:+5511920702442">+55 11 92070-2442</a></p>
+      <div class="contact-links">
+        <a class="btn btn-ghost-dark" href="https://wa.me/5511920702442?text=Hola%20Alejandro,%20vi%20tu%20portfolio." target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-ghost-dark" href="/es/agenda/">Agendar llamada</a>
+      </div>
+    </div>
+    <form class="ticket" id="ticket-form">
+      <label>Nombre<input name="nombre" type="text" autocomplete="name" required></label>
+      <label>Email<input name="email" type="email" autocomplete="email" required></label>
+      <label>Teléfono (opcional)<input name="telefono" type="tel" autocomplete="tel"></label>
+      <label>Empresa o asunto<input name="empresa" type="text" autocomplete="organization"></label>
+      <label class="full">Mensaje<textarea name="mensaje" rows="4" required></textarea></label>
+      <button class="btn btn-primary" type="submit">Enviar ticket</button>
+      <p class="ticket-msg" id="ticket-msg" role="status"></p>
+    </form>
+  </div>
+  <div class="foot"><p class="wrap">© 2026 Alejandro Carpinelli · São Paulo · <a href="https://github.com/AleCarpi/webahcarpinelli" target="_blank" rel="noopener">Código en GitHub</a></p></div>
+</footer>
 </body>
 </html>
